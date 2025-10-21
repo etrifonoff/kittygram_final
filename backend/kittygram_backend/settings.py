@@ -1,14 +1,21 @@
 # flake8: noqa
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+from django.core.management.utils import get_random_secret_key
+
+# Загружаем переменные окружения из .env файла
+load_dotenv()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = False
+SECRET_KEY = os.getenv("SECRET_KEY", get_random_secret_key())
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "ekittygram.webhop.me"]
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 INSTALLED_APPS = [
     "django.contrib.admin",
