@@ -153,3 +153,5 @@ node_modules
 
 nginx.default.example
 docker-compose.yml
+
+.github/workflows/main_copy.yml

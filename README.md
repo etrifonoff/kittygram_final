@@ -1,6 +1,6 @@
 # Kittygram
 
-![Workflow Status](https://github.com/evtrifonoff/kittygram_final/actions/workflows/kittygram_workflow.yml/badge.svg)
+[![Main Kittygram workflow](https://github.com/etrifonoff/kittygram_final/actions/workflows/main.yml/badge.svg)](https://github.com/etrifonoff/kittygram_final/actions/workflows/main.yml)
 
 ## Описание проекта
 
